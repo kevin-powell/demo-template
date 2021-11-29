@@ -1,0 +1,24 @@
+%flex {
+  display: flex;
+  gap: var(--gap, var(--spacer));
+}
+
+%grid {
+  display: grid;
+  gap: var(--gap, var(--spacer));
+}
+
+@mixin flex($align: start, $justify: between) {
+  @extend %flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+body {
+  @include flex;
+}
+
+.card {
+  background: lightblue;
+  @include flex;
+}
