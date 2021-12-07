@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "sass": "sass --watch sass/style.scss:style.css"
   },
   "devDependencies": {
     "sass": "^1.43.5",

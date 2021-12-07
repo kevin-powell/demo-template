@@ -1,6 +1,8 @@
+@use 'sass:map';
+@use 'sass:math';
 @use '../abstracts' as *;
 
-:root { 
+:root {
   --ff-primary: #{$ff-primary};
   --ff-secondary: #{$ff-secondary};
   --ff-accent: #{$ff-accent};
@@ -8,22 +10,20 @@
   --spacer: #{$spacer};
 
   @each $color, $shade in $colors {
-    
     @each $property, $value in $shade {
       --clr-#{$color}-#{$property}: #{$value};
-    } 
+    }
   }
 
-  @each $screen-size, $property in $font-sizes {
+  @each $screen-size, $fs-base in $base-font-sizes {
     @if $screen-size == small {
-      @each $prop, $value in $property { 
-        --fs-#{$prop}: #{$value};
+      @for $i from -3 through 5 {
+        --fs-#{($i+4)*100}: #{math.pow(map.get($fs-base, ratio), $i) * map.get($fs-base, base)};
       }
-    } @else { 
+    } @else {
       @include mq($screen-size) {
-        @each $prop,
-        $value in $property {
-          --fs-#{$prop}: #{$value};
+        @for $i from -3 through 5 {
+          --fs-#{($i+4)*100}: #{math.pow(map.get($fs-base, ratio), $i) * map.get($fs-base, base)};
         }
       }
     }

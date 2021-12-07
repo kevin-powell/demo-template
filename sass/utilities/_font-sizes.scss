@@ -1,9 +1,11 @@
 @use '../abstracts/' as *;
 
-@each $screen-size, $property in $font-sizes {
+@each $screen-size, $property in $base-font-sizes {
   @if $screen-size == small {
-    @each $prop, $value in $property { 
-      .fs-#{$prop} { font-size: var(--fs-#{$prop}) }
+    @for $i from 1 through 9 {
+      .fs-#{$i*100} {
+        font-size: var(--fs-#{$i * 100});
+      }
     }
   }
 }
