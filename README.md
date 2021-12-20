@@ -1,4 +1,4 @@
-![logo]('https://repository-images.githubusercontent.com/433153785/1477136c-0521-4c63-8325-c6220a14beb2')
+![logo]('https://github.com/kevin-powell/demo-template/blob/679e716bf85d8f4ddba57f27354c8b7f9a1232d6/github.jpg')
 
 # demo-template
 A CSS "framework" that I'm using for my demos.
