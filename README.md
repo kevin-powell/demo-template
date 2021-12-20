@@ -1,4 +1,4 @@
-![logo]('github.jpg')
+![logo](github.jpg)
 
 # demo-template
 A CSS "framework" that I'm using for my demos.
