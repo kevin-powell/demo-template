@@ -1,7 +1,7 @@
 :root {
-  --ff-primary: sans-serif;
-  --ff-secondary: serif;
-  --ff-accent: cursive;
+  --ff-primary: Heebo, sans-serif;
+  --ff-secondary: Bungee, cursive;
+  --ff-accent: Bungee Shade, cursive;
   --spacer: 1rem;
   --clr-neutral-100: 0 0% 100%;
   --clr-neutral-200: 0 0% 90%;
@@ -10,35 +10,35 @@
   --clr-neutral-500: 0 0% 50%;
   --clr-neutral-600: 0 0% 40%;
   --clr-neutral-700: 0 0% 30%;
-  --clr-neutral-800: 0 0% 10;
+  --clr-neutral-800: 0 0% 10%;
   --clr-neutral-900: 0 0% 0%;
-  --clr-primary-100: 250 50% 100%;
-  --clr-primary-200: 250 50% 90%;
-  --clr-primary-300: 250 50% 70%;
-  --clr-primary-400: 250 50% 60%;
-  --clr-primary-500: 250 50% 50%;
-  --clr-primary-600: 250 50% 40%;
-  --clr-primary-700: 250 50% 30%;
-  --clr-primary-800: 250 50% 10%;
-  --clr-primary-900: 250 50% 0%;
-  --clr-secondary-100: 150 50% 100%;
-  --clr-secondary-200: 150 50% 90%;
-  --clr-secondary-300: 150 50% 70%;
-  --clr-secondary-400: 150 50% 60%;
-  --clr-secondary-500: 150 50% 50%;
-  --clr-secondary-600: 150 50% 40%;
-  --clr-secondary-700: 150 50% 30%;
-  --clr-secondary-800: 150 50% 10%;
-  --clr-secondary-900: 150 50% 0%;
-  --clr-new-color-100: 50 50% 100%;
-  --clr-new-color-200: 50 50% 90%;
-  --clr-new-color-300: 50 50% 70%;
-  --clr-new-color-400: 50 50% 60%;
-  --clr-new-color-500: 50 50% 50%;
-  --clr-new-color-600: 50 50% 40%;
-  --clr-new-color-700: 50 50% 30%;
-  --clr-new-color-800: 50 50% 10%;
-  --clr-new-color-900: 50 50% 0%;
+  --clr-primary-100: 214 100% 90%;
+  --clr-primary-200: 214 100% 80%;
+  --clr-primary-300: 214 100% 70%;
+  --clr-primary-400: 214 100% 60%;
+  --clr-primary-500: 214 100% 50%;
+  --clr-primary-600: 214 100% 40%;
+  --clr-primary-700: 214 100% 30%;
+  --clr-primary-800: 214 100% 20%;
+  --clr-primary-900: 214 100% 10%;
+  --clr-secondary-100: 284 71% 90%;
+  --clr-secondary-200: 284 71% 80%;
+  --clr-secondary-300: 284 71% 70%;
+  --clr-secondary-400: 284 71% 60%;
+  --clr-secondary-500: 284 71% 50%;
+  --clr-secondary-600: 284 71% 40%;
+  --clr-secondary-700: 284 71% 30%;
+  --clr-secondary-800: 284 71% 20%;
+  --clr-secondary-900: 284 71% 10%;
+  --clr-accent-100: 346 80% 90%;
+  --clr-accent-200: 346 80% 80%;
+  --clr-accent-300: 346 80% 70%;
+  --clr-accent-400: 346 80% 60%;
+  --clr-accent-500: 346 80% 50%;
+  --clr-accent-600: 346 80% 40%;
+  --clr-accent-700: 346 80% 30%;
+  --clr-accent-800: 346 80% 20%;
+  --clr-accent-900: 346 80% 10%;
   --fs-100: 0.625rem;
   --fs-200: 0.7625rem;
   --fs-300: 0.8975rem;
@@ -74,6 +74,84 @@
     --fs-800: 3.5rem;
     --fs-900: 5rem;
   }
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  font-family: var(--ff-primary);
 }
 
 .text-neutral-100 {
@@ -292,76 +370,81 @@
   background-color: hsl(var(--clr-secondary-900));
 }
 
-.text-new-color-100 {
-  color: hsl(var(--clr-new-color-100));
+.text-accent-100 {
+  color: hsl(var(--clr-accent-100));
 }
 
-.bg-new-color-100 {
-  background-color: hsl(var(--clr-new-color-100));
+.bg-accent-100 {
+  background-color: hsl(var(--clr-accent-100));
 }
 
-.text-new-color-200 {
-  color: hsl(var(--clr-new-color-200));
+.text-accent-200 {
+  color: hsl(var(--clr-accent-200));
 }
 
-.bg-new-color-200 {
-  background-color: hsl(var(--clr-new-color-200));
+.bg-accent-200 {
+  background-color: hsl(var(--clr-accent-200));
 }
 
-.text-new-color-300 {
-  color: hsl(var(--clr-new-color-300));
+.text-accent-300 {
+  color: hsl(var(--clr-accent-300));
 }
 
-.bg-new-color-300 {
-  background-color: hsl(var(--clr-new-color-300));
+.bg-accent-300 {
+  background-color: hsl(var(--clr-accent-300));
 }
 
-.text-new-color-400 {
-  color: hsl(var(--clr-new-color-400));
+.text-accent-400 {
+  color: hsl(var(--clr-accent-400));
 }
 
-.bg-new-color-400 {
-  background-color: hsl(var(--clr-new-color-400));
+.bg-accent-400 {
+  background-color: hsl(var(--clr-accent-400));
 }
 
-.text-new-color-500 {
-  color: hsl(var(--clr-new-color-500));
+.text-accent-500 {
+  color: hsl(var(--clr-accent-500));
 }
 
-.bg-new-color-500 {
-  background-color: hsl(var(--clr-new-color-500));
+.bg-accent-500 {
+  background-color: hsl(var(--clr-accent-500));
 }
 
-.text-new-color-600 {
-  color: hsl(var(--clr-new-color-600));
+.text-accent-600 {
+  color: hsl(var(--clr-accent-600));
 }
 
-.bg-new-color-600 {
-  background-color: hsl(var(--clr-new-color-600));
+.bg-accent-600 {
+  background-color: hsl(var(--clr-accent-600));
 }
 
-.text-new-color-700 {
-  color: hsl(var(--clr-new-color-700));
+.text-accent-700 {
+  color: hsl(var(--clr-accent-700));
 }
 
-.bg-new-color-700 {
-  background-color: hsl(var(--clr-new-color-700));
+.bg-accent-700 {
+  background-color: hsl(var(--clr-accent-700));
 }
 
-.text-new-color-800 {
-  color: hsl(var(--clr-new-color-800));
+.text-accent-800 {
+  color: hsl(var(--clr-accent-800));
 }
 
-.bg-new-color-800 {
-  background-color: hsl(var(--clr-new-color-800));
+.bg-accent-800 {
+  background-color: hsl(var(--clr-accent-800));
 }
 
-.text-new-color-900 {
-  color: hsl(var(--clr-new-color-900));
+.text-accent-900 {
+  color: hsl(var(--clr-accent-900));
 }
 
-.bg-new-color-900 {
-  background-color: hsl(var(--clr-new-color-900));
+.bg-accent-900 {
+  background-color: hsl(var(--clr-accent-900));
+}
+
+.bg-gradient {
+  color: hsl(var(--clr-neutral-100));
+  background-image: linear-gradient(var(--bg-deg, -45deg), hsl(var(--clr-primary-400)), hsl(var(--clr-secondary-500)), hsl(var(--clr-accent-500)));
 }
 
 .fs-100 {
@@ -410,20 +493,35 @@
   padding-inline: var(--spacer);
 }
 
-.card, body {
+.flex {
   display: flex;
   gap: var(--gap, var(--spacer));
 }
 
-body {
-  align-items: start;
-  justify-content: between;
+.grid, .with-sidebar, .main-layout, .even-columns {
+  display: grid;
+  gap: var(--gap, var(--spacer));
+}
+
+@media only screen and (min-width: 50em) {
+  .even-columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
 }
 
 .card {
-  background: lightblue;
-  align-items: start;
-  justify-content: between;
+  padding: var(--spacer);
+  box-shadow: var(--shadow, var(--shadow-1));
+}
+
+.main-layout {
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.with-sidebar {
+  grid-template-columns: 1fr 20rem;
 }
 
 /*# sourceMappingURL=style.css.map */
